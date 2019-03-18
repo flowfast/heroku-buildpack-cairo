@@ -41,9 +41,34 @@ function vendor() {
   export LD_LIBRARY_PATH="$path/lib:$LD_LIBRARY_PATH"
 }
 
+function vendorBZ() {
+  binary="$1"
+  path="$2"
+
+  echo "Fetching $binary" | indent
+  mkdir -p $path
+  curl $binary -s -o - | tar xj -C $path -f -
+
+  if [ -d "$path/bin" ]; then
+    export PATH=$path/bin:$PATH
+  fi
+
+  if [ -d "$path/lib/pkgconfig" ]; then
+    # pkg-config should handle compiler options (if used)
+    export PKG_CONFIG_PATH="$path/lib/pkgconfig:$PKG_CONFIG_PATH"
+  fi
+
+  # standard paths
+  export CPPPATH="$path/include:$CPPPATH"
+  export CPATH="$path/include:$CPATH"
+  export LIBRARY_PATH="$path/lib:$LIBRARY_PATH"
+
+  export LD_LIBRARY_PATH="$path/lib:$LD_LIBRARY_PATH"
+}
+
 echo "-----> Vendoring binaries"
 vendor "https://fossies.org/linux/misc/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/cairo"
-vendor "https://fossies.org/linux/misc/freetype-2.10.0.tar.bz2" "$BUILD_DIR/vendor/freetype"
+vendorBZ "https://fossies.org/linux/misc/freetype-2.10.0.tar.bz2" "$BUILD_DIR/vendor/freetype"
 vendor "https://fossies.org/linux/misc/giflib-5.1.7.tar.gz"   "$BUILD_DIR/vendor/giflib"
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/pixman-0.34.0.tar.gz"  "$BUILD_DIR/vendor/pixman"
 vendor "https://fossies.org/linux/misc/pango-1.43.0.tar.gz"  "$BUILD_DIR/vendor/pango"
