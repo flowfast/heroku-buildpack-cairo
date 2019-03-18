@@ -43,7 +43,7 @@ function vendor() {
 
 echo "-----> Vendoring binaries"
 vendor "https://fossies.org/linux/misc/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/cairo"
-vendor "https://fossies.org/linux/misc/freetype-2.9.1.tar.gz" "$BUILD_DIR/vendor/freetype"
+vendor "https://fossies.org/linux/misc/freetype-2.10.0.tar.gz" "$BUILD_DIR/vendor/freetype"
 vendor "https://fossies.org/linux/misc/giflib-5.1.7.tar.gz"   "$BUILD_DIR/vendor/giflib"
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/pixman-0.34.0.tar.gz"  "$BUILD_DIR/vendor/pixman"
 vendor "https://fossies.org/linux/misc/pango-1.43.0.tar.gz"  "$BUILD_DIR/vendor/pango"
