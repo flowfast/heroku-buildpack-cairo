@@ -73,7 +73,7 @@ vendor "https://fossies.org/linux/misc/giflib-5.1.8.tar.gz"   "$BUILD_DIR/vendor
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/pixman-0.34.0.tar.gz"  "$BUILD_DIR/vendor/pixman"
 vendor "https://fossies.org/linux/misc/pango-1.43.0.tar.gz"  "$BUILD_DIR/vendor/pango"
 vendor "https://codeload.github.com/behdad/harfbuzz/tar.gz/1.5.1"  "$BUILD_DIR/vendor/harfbuzz"
-vendor "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.12.5.tar.gz"  "$BUILD_DIR/vendor/fontconfig"
+vendorBZ "https://s3.amazonaws.com/files.kaiten.io/bp/fontconfig-2.12.5.tar.bz2"  "$BUILD_DIR/vendor/fontconfig"
 
 echo "-----> Tweaking Cairo, FreeType, and Pixman include paths"
 
