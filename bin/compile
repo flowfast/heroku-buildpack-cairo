@@ -71,7 +71,7 @@ vendor "https://fossies.org/linux/misc/cairo-1.16.0.tar.gz"  "$BUILD_DIR/vendor/
 vendorBZ "https://fossies.org/linux/misc/freetype-2.10.1.tar.bz2" "$BUILD_DIR/vendor/freetype"
 vendor "https://fossies.org/linux/misc/giflib-5.2.1.tar.gz"   "$BUILD_DIR/vendor/giflib"
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/pixman-0.34.0.tar.gz"  "$BUILD_DIR/vendor/pixman"
-vendor "https://fossies.org/linux/misc/pango-1.44.5.tar.gz"  "$BUILD_DIR/vendor/pango"
+vendor "https://fossies.org/linux/misc/pango-1.44.6.tar.gz"  "$BUILD_DIR/vendor/pango"
 vendor "https://codeload.github.com/behdad/harfbuzz/tar.gz/1.5.1"  "$BUILD_DIR/vendor/harfbuzz"
 vendorBZ "https://s3.amazonaws.com/files.kaiten.io/bp/fontconfig-2.12.5.tar.bz2"  "$BUILD_DIR/vendor/fontconfig"
 
