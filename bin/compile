@@ -97,7 +97,7 @@ vendorXZ "https://s3.amazonaws.com/files.kaiten.io/bp/freetype-2.10.2.tar.xz" "$
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/giflib-5.2.1.tar.gz"   "$BUILD_DIR/vendor/giflib"
 vendor "https://s3.amazonaws.com/files.kaiten.io/bp/pixman-0.34.0.tar.gz"  "$BUILD_DIR/vendor/pixman"
 vendorXZ "https://s3.amazonaws.com/files.kaiten.io/bp/pango-1.44.7.tar.xz"  "$BUILD_DIR/vendor/pango"j
-vendorXZ "https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.5.1.tar.bz2"  "$BUILD_DIR/vendor/harfbuzz"
+vendorBZ "https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.5.1.tar.bz2"  "$BUILD_DIR/vendor/harfbuzz"
 vendorBZ "https://s3.amazonaws.com/files.kaiten.io/bp/fontconfig-2.12.5.tar.bz2"  "$BUILD_DIR/vendor/fontconfig"
 
 echo "-----> Tweaking Cairo, FreeType, and Pixman include paths"
